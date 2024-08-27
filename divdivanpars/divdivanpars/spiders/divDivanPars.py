@@ -14,3 +14,7 @@ class DivDivanParsSpider(scrapy.Spider):
                 "price": svet.css("div.pY3d2 span::text").get(),  # Цена товара
                 "url": response.urljoin(svet.css("a").attrib["href"])  # Ссылка на товар
             }
+
+
+# Запуск скрепинга следующей строкой через терминал
+# scrapy crawl svet_pars -o result.csv -t csv
